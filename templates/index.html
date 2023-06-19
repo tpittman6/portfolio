@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{ url_for('static', filename='style.css' ) }} />
+    <title>Home</title>
+</head>
+<body>
+    <div>
+        {% block content %}
+        <nav>
+            <li><a href="/">Home</a> </li>
+            <li> <a href="/my_projects">My Projects</a></li>
+            <div class="animation start-home"></div>
+          </nav>
+        <h1>Home Page</h1>
+        {% endblock %}
+    </div>
+    <script 
+    type="text/javascript" 
+    src="{{ url_for('static', filename='index.js')}}"
+    ></script>
+</body>
+</html>
